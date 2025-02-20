@@ -4,10 +4,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.ListView?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.chronosacaria.pdforganiser.controller.PdfOrganiserController">
     <TextField fx:id="searchField" promptText="Search..." onKeyReleased="#onSearchFieldChanged"/>
-    <TableView fx:id="tableView">
+    <TableView fx:id="tableView" onMouseClicked="#onMouseClicked">
         <columns>
             <TableColumn fx:id="titleColumn" text="Title"/>
             <TableColumn fx:id="authorColumn" text="Author"/>
@@ -21,5 +20,4 @@
         </columns>
     </TableView>
     <Button fx:id="addButton" text="Add PDF" onAction="#onAddButtonClicked"/>
-    <!--<ListView fx:id="pdfListView"/>-->
 </VBox>

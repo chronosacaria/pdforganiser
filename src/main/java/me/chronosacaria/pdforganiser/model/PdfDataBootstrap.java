@@ -13,7 +13,7 @@ public class PdfDataBootstrap {
     private String filePathProperty;
     private List<String> contentTagsProperty;
 
-    // Constructors
+    @SuppressWarnings("unused")
     public PdfDataBootstrap(
             String title,
             String author,
@@ -38,7 +38,6 @@ public class PdfDataBootstrap {
     public PdfDataBootstrap() {
     }
 
-    // Getters and Setters
     public String getTitleProperty() {
         return titleProperty;
     }

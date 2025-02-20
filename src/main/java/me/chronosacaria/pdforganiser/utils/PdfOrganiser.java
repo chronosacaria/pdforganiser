@@ -4,19 +4,11 @@ import me.chronosacaria.pdforganiser.model.PdfData;
 import me.chronosacaria.pdforganiser.model.PdfDataBootstrap;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class PdfOrganiser {
 
-    // Convert PdfData to PdfDataBootstrap
     public static PdfDataBootstrap pdfToBootstrap(PdfData pdf) {
         PdfDataBootstrap bootstrap = new PdfDataBootstrap();
         bootstrap.setTitleProperty(pdf.getTitle());
@@ -31,7 +23,6 @@ public class PdfOrganiser {
         return bootstrap;
     }
 
-    // Convert PdfDataBootstrap to PdfData
     public static PdfData bootstrapToPdf(PdfDataBootstrap bootstrap) {
         PdfData pdf = new PdfData();
         pdf.setTitle(bootstrap.getTitleProperty());
@@ -46,7 +37,6 @@ public class PdfOrganiser {
         return pdf;
     }
 
-    // Convert List<PdfData> to List<PdfDataBootstrap>
     public static List<PdfDataBootstrap> pdfListToBootstrapList(List<PdfData> pdfList) {
         List<PdfDataBootstrap> bootstrapList = new ArrayList<>();
         for (PdfData pdf : pdfList) {
@@ -55,7 +45,6 @@ public class PdfOrganiser {
         return bootstrapList;
     }
 
-    // Convert List<PdfDataBootstrap> to List<PdfData>
     public static List<PdfData> bootstrapListToPdfList(List<PdfDataBootstrap> bootstrapList) {
         List<PdfData> pdfList = new ArrayList<>();
         for (PdfDataBootstrap bootstrap : bootstrapList) {

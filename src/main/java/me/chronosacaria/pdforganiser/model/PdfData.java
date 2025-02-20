@@ -1,19 +1,5 @@
 package me.chronosacaria.pdforganiser.model;
 
-import javafx.beans.property.*;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
-import java.io.Serializable;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import java.time.LocalDate;
-import java.util.List;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -37,8 +23,9 @@ public class PdfData {
             int pageCount,
             String libraryOfCongressClassification,
             LocalDate date,
-            String uri,
-            List<String> contentTags) {
+            String uri
+            //, List<String> contentTags
+    ) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -47,13 +34,12 @@ public class PdfData {
         this.libraryOfCongressClassification = libraryOfCongressClassification;
         this.dateAdded = date;
         this.filePath = uri;
-        this.contentTags = contentTags;
+        //this.contentTags = contentTags;
     }
 
     public PdfData() {
     }
 
-    // Getters and Setters
     public String getTitle() {
         return title;
     }

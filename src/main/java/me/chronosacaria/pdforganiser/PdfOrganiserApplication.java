@@ -28,12 +28,13 @@ public class PdfOrganiserApplication extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        // Load existing PDF data from JSON
         File jsonFile = new File("pdfs.json");
         List<PdfDataBootstrap> bootstraps = JsonUtils.readJson(jsonFile.getAbsolutePath(), new TypeToken<>() {});
-        List<PdfData> pdfList = PdfOrganiser.bootstrapListToPdfList(bootstraps);
+        List<PdfData> pdfList = null;
+        if (bootstraps != null) {
+            pdfList = PdfOrganiser.bootstrapListToPdfList(bootstraps);
+        }
 
-        // Set the PDF list to the controller
         PdfOrganiserController controller = loader.getController();
 
         if (controller != null) {

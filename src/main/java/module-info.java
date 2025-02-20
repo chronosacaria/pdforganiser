@@ -9,6 +9,9 @@ module me.chronosacaria.pdforganiser {
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
     requires com.google.gson;
+    requires org.apache.pdfbox;
+    requires java.desktop;
+    requires java.logging;
 
     opens me.chronosacaria.pdforganiser to javafx.fxml;
     exports me.chronosacaria.pdforganiser;
